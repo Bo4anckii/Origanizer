@@ -3,37 +3,30 @@ package organizer.models;
 import java.util.Calendar;
 
 public class Note {
-    private long id;
-    private Calendar dateTime;
-    private String text;
+    private final long id;
+    private final Calendar dateTime;
+    private final String text;
+    private final String time;
 
     public Note(long id, Calendar dateTime, String text) {
         this.id = id;
         this.dateTime = dateTime;
         this.text = text;
+        this.time = dateTime.getTime().getHours()+":"+dateTime.getTime().getMinutes();
     }
 
     public long getId() {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public Calendar getDateTime() {
         return dateTime;
     }
-
-    public void setDateTime(Calendar dateTime) {
-        this.dateTime = dateTime;
-    }
-
     public String getText() {
         return text;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public String getTime() {
+        return time;
     }
 }

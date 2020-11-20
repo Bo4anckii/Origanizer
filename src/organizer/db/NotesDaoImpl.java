@@ -3,10 +3,8 @@ package organizer.db;
 import organizer.models.Note;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.List;
+import java.sql.Date;
+import java.util.*;
 
 public class NotesDaoImpl implements NotesDao {
 
@@ -20,8 +18,9 @@ public class NotesDaoImpl implements NotesDao {
             Statement statement = handler.getDbConnection().createStatement();
             ResultSet set = statement.executeQuery(Const.NOTES_GET);
             while (set.next()){
-                Date date = set.getDate(Const.NOTE_DATETIME);
-                Calendar calendar = new GregorianCalendar(date.getYear(), date.getMonth(), date.getDay(), date.getHours(), date.getMinutes());
+                Timestamp ts = set.getTimestamp(Const.NOTE_DATETIME);
+                ts.setHours(ts.getHours()-3);
+                Calendar calendar = new GregorianCalendar(ts.getYear()+1900, ts.getMonth(), ts.getDate(), ts.getHours(), ts.getMinutes(), ts.getSeconds());
                 notes.add(new Note(
                         set.getLong(Const.NOTE_ID),
                         calendar,

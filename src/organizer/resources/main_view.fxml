@@ -6,7 +6,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="organizer.ui.main.MainController">
     <TableView fx:id="table" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
         <columns>
-            <TableColumn fx:id="timeColumn" prefWidth="100.0" text="Время" />
+            <TableColumn fx:id="timeColumn" prefWidth="98.0" text="Время" />
             <TableColumn fx:id="noteColumn" prefWidth="500.0" text="Запись" />
         </columns>
     </TableView>
