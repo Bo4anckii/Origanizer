@@ -3,8 +3,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="crossword.ui.main.MainController">
-    <TableView fx:id="table" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="organizer.ui.main.MainController">
+    <TableView fx:id="table" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
         <columns>
             <TableColumn fx:id="timeColumn" prefWidth="100.0" text="Время" />
             <TableColumn fx:id="noteColumn" prefWidth="500.0" text="Запись" />
@@ -13,4 +13,5 @@
     <DatePicker fx:id="datePicker" layoutX="200.0" layoutY="10.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="8.0" />
     <Button fx:id="yesterdayBtn" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" prefWidth="100.0" text="Вчера" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="8.0" />
     <Button fx:id="tomorrowBtn" layoutX="534.0" layoutY="8.0" mnemonicParsing="false" prefWidth="100.0" text="Завтра" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="8.0" />
+    <Button fx:id="addBtn" layoutX="274.0" layoutY="368.0" mnemonicParsing="false" text="Добавить" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" />
 </AnchorPane>
