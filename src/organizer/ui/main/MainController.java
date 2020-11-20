@@ -1,5 +1,6 @@
 package organizer.ui.main;
 
+import com.jfoenix.controls.JFXDatePicker;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
@@ -17,15 +18,14 @@ import organizer.models.Note;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
-import java.util.Calendar;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
 
     public TableView<Note> table;
+    public JFXDatePicker datePicker;
     public TableColumn<Note, String> timeColumn;
     public TableColumn<Note, String> noteColumn;
-    public DatePicker datePicker;
     public Button yesterdayBtn;
     public Button tomorrowBtn;
     public Button addBtn;
