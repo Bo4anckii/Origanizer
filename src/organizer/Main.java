@@ -1,4 +1,4 @@
-package crossword;
+package organizer;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,8 +11,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("resources/main_view.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setTitle("Органайзер");
+        primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
     }
 
