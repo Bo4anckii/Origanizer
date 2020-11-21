@@ -44,6 +44,14 @@ public class MainController implements Initializable {
         noteColumn.setCellValueFactory(new PropertyValueFactory<>("text"));
         datePicker.setOnAction(event -> showNotes());
         deleteButton.setOnAction(event -> deleteNote());
+        yesterdayBtn.setOnAction(event -> {
+            datePicker.setValue(datePicker.getValue().minusDays(1));
+            showNotes();
+        });
+        tomorrowBtn.setOnAction(event -> {
+            datePicker.setValue(datePicker.getValue().plusDays(1));
+            showNotes();
+        });
         showNotes();
     }
 
