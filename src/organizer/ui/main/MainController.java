@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import organizer.db.NotesDao;
 import organizer.db.NotesDaoImpl;
 import organizer.models.Note;
+import organizer.ui.add.AddController;
 
 import java.io.IOException;
 import java.net.URL;
@@ -53,10 +54,16 @@ public class MainController implements Initializable {
             stage.setTitle("Добавление записи");
             stage.setScene(new Scene(root, 600, 400));
             stage.setResizable(false);
+            loader.<AddController>getController().setParent(this);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void updateData() {
+        model.setNotes(notesDao.getNotes());
+        showNotes();
     }
 
     private void showNotes() {
