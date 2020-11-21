@@ -33,6 +33,7 @@ public class MainController implements Initializable {
 
     private final NotesDao notesDao = new NotesDaoImpl();
     private final MainModel model = new MainModel();
+    public Button deleteButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -42,6 +43,7 @@ public class MainController implements Initializable {
         timeColumn.setCellValueFactory(new PropertyValueFactory<>("time"));
         noteColumn.setCellValueFactory(new PropertyValueFactory<>("text"));
         datePicker.setOnAction(event -> showNotes());
+        deleteButton.setOnAction(event -> deleteNote());
         showNotes();
     }
 
@@ -76,5 +78,12 @@ public class MainController implements Initializable {
             }
         }
         table.setItems(notes);
+    }
+
+    private void deleteNote() {
+        if (table.getSelectionModel().getSelectedIndex() != -1) {
+            notesDao.deleteNote(table.getSelectionModel().getSelectedItem());
+            updateData();
+        }
     }
 }

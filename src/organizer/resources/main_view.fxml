@@ -17,4 +17,5 @@
     <Button fx:id="tomorrowBtn" layoutX="534.0" layoutY="8.0" mnemonicParsing="false" prefWidth="100.0" text="Завтра" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="8.0" />
     <Button fx:id="addBtn" layoutX="274.0" layoutY="368.0" mnemonicParsing="false" text="Добавить" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" />
    <JFXDatePicker fx:id="datePicker" layoutX="215.0" layoutY="8.0" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="8.0" />
+   <Button fx:id="deleteButton" layoutX="25.0" layoutY="377.0" mnemonicParsing="false" prefWidth="100.0" text="Удалить" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="15.0" />
 </AnchorPane>
